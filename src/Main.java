@@ -36,7 +36,8 @@ public class Main {
 
         List<Edge> XEdge = new ArrayList<>();
         List<Edge> YEdge = new ArrayList<Edge>();
-   
+        List<Coordinate> Xcoordinates = new ArrayList<>();
+        List<Coordinate> Ycoordinates = new ArrayList<>();
 
 
 
@@ -49,11 +50,20 @@ public class Main {
                 XEdge.add(new Edge(X.get(i),X.get(i+1)));
                 YEdge.add(new Edge(Y.get(i),Y.get(i+1)));
             }
+
+            Xcoordinates.add(new Coordinate(X.get(i)));
+            Ycoordinates.add(new Coordinate(Y.get(i)));
         }
 
 
         List<Edge> common = getCommonEdges(XEdge,YEdge);
-        System.out.println(common.size());
+        System.out.println("Common edges: " +  common.size() + " :: " + common);
+
+
+        List<Coordinate> commonC = getCommonCoordinates(Xcoordinates,Ycoordinates);
+        System.out.println("Common coordz: " +  commonC.size() + " :: " + commonC);
+
+
 
     }
 
