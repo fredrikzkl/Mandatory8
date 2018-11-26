@@ -6,9 +6,10 @@ public class Main {
     private List<Integer> X;
     private List<Integer> Y;
 
-    public Main(int size){
+    public static final int n = 64;
 
-        int n = size;
+    public Main(){
+
         int[] consts = {-2,0,2,-1,1,-3,3};
 
         X = new ArrayList<>();
@@ -35,6 +36,9 @@ public class Main {
 
         List<Edge> XEdge = new ArrayList<>();
         List<Edge> YEdge = new ArrayList<Edge>();
+   
+
+
 
         for(int i = 0 ; i < X.size(); i++){
             //Closing da loop
@@ -53,9 +57,6 @@ public class Main {
 
     }
 
-    public double coorinatify(float point, int n){
-        return Math.cos(point*2*Math.PI/n);
-    }
 
     public List<Edge> getCommonEdges(List<Edge> X, List<Edge> Y){
         List<Edge> commonEdges = new ArrayList<>();
@@ -67,8 +68,8 @@ public class Main {
         return commonEdges;
     }
 
-    public List<Tuple> getCommonTuples(List<Tuple> X, List<Tuple> Y){
-        List<Tuple> commonEdges = new ArrayList<>();
+    public List<Coordinate> getCommonCoordinates(List<Coordinate> X, List<Coordinate> Y){
+        List<Coordinate> commonEdges = new ArrayList<>();
         for(int i = 0; i < X.size(); i++) {
             for (int j = 0; j < Y.size(); j++) {
                 if (X.get(i).equals(Y.get(j))) commonEdges.add(X.get(i));
@@ -79,6 +80,6 @@ public class Main {
 
 
     public static void main(String[] args) {
-        new Main(32);
+        new Main();
     }
 }
