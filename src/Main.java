@@ -59,7 +59,6 @@ public class Main {
 
             X.add(counter);
             counter++;
-            System.out.println(counter);
             if(counter > n) break;
         }
 
@@ -82,17 +81,9 @@ public class Main {
 
         System.out.println(X);
         System.out.println(Y);
-        /*
-        for(int i = 1; i != n; i++){
-            for(int j = 0; j < consts.length; j++){
-                int temp = (i * n/5) + consts[j];
-                Y.add(temp);
-            }
-        }
-        System.out.println("X size: " + X.size() + ", Y size: "+  Y.size());
+
 
         //Lets try those god damn edges
-
         List<Edge> XEdge = new ArrayList<>();
         List<Edge> YEdge = new ArrayList<Edge>();
         List<Coordinate> Xcoordinates = new ArrayList<>();
@@ -101,28 +92,15 @@ public class Main {
 
 
         for(int i = 0 ; i < X.size(); i++){
-            //Closing da loop
-            if(i == X.size()-1){
-                XEdge.add(new Edge(X.get(i),X.get(0)));
-                YEdge.add(new Edge(Y.get(i),Y.get(0)));
-            }else{
-                XEdge.add(new Edge(X.get(i),X.get(i+1)));
-                YEdge.add(new Edge(Y.get(i),Y.get(i+1)));
-            }
-
             Xcoordinates.add(new Coordinate(X.get(i)));
             Ycoordinates.add(new Coordinate(Y.get(i)));
         }
 
-
-        List<Edge> common = getCommonEdges(XEdge,YEdge);
-        System.out.println("Common edges: " +  common.size() + " :: " + common);
-
-
+        
         List<Coordinate> commonC = getCommonCoordinates(Xcoordinates,Ycoordinates);
         System.out.println("Common coordz: " +  commonC.size() + " :: " + commonC);
 
-*/
+
 
     }
 
